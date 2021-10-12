@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    /* box-sizing: border-box; */
+}
+
+@font-face {
+    font-family:'FontAwesome';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+        url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+        url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+        url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+        url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+.fa-search::before {
+    content:"\f002";
+}
+
+.fa {
+    display:inline-block;
+    font:normal normal normal 14px/1 FontAwesome;
+    font-size:inherit;
+    text-rendering:auto;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.topnav {
+    position: relative;
+    overflow: hidden;
+    padding: 0 5%;
+    background-color: #333;
+}
+  
+.topnav a {
+    float: left;
+    /* color: #f2f2f2; */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    /* font-size: 30px; */
+    height: 30px;
+}
+
+.topnav a::after{
+    content: "";
+    clear: both;
+}
+  
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.topnav .active input {
+    /* float: left; */
+    padding: 0px 5px; /*| T R B L | T LR B | TB LR | TBLR |*/
+    padding-bottom: 0;
+    /* color: #f2f2f2; */
+    /* text-align: center; */
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    /* font-size: 17px; */
+    display: inline;
+    /* background-color: #04AA6D; */
+    /* color: white; */
+    outline: none;
+    height: 30px;
+    /* width: 30%; */
+    font-size: 18px;
+    border: none;
+    width: 500px;
+}
+
+.active input::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+.topnav .active button {
+    position: absolute;
+    text-decoration: none;
+    display: inline;
+    font-size: 20px;
+    border: none;
+    height: 30px;
+    padding: 3px 5px ; /*| T R B L | T LR B | TB LR | TBLR |*/
+    width: 75px;
+}
+
+a.title {
+    font-size: 30px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+}
+
+.topnav-centered .active {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.topnav-right {
+    float: right;
+}
+
+.topnav-right a {
+    line-height: 1.5;
+    font-size: large;
+    width: auto;
+    float: right;
+}
+
+.image-circle {
+    display: inline;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    max-height: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+}
+
+.image-circle img{
+    display: inline;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    max-height: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+}
+
+.us_na {
+    color: white;
+}
+
+.sidebar-btn {
+    padding: 0 15px;
+    width: 100%;
+    /* background-color: #444; */
+    border: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown user {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.rightside:hover .dropdown{
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+        float: none;
+        display: block;
+  }
+    
+  .topnav-centered a {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        
+  }
+}
+
